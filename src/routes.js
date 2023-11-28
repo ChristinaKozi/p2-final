@@ -1,3 +1,4 @@
+import SongForm from "./components/SongForm";
 import Home from "./pages/Home";
 import Songs from "./pages/Songs";
 
@@ -10,10 +11,10 @@ const routes = [
         path: "/songs",
         element: <Songs />
     },
-    /*{
+    {
         path: "/song/:id",
-        element: <Song />
-    }*/
+        element: <SongForm />
+    }
 ]
 
 export default routes;

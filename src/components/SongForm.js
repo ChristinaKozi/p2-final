@@ -1,8 +1,12 @@
 import React from "react";
+import NavBar from "./NavBar";
 
 function SongForm(){
     return (
         <>
+            <header>
+                <NavBar />
+            </header>
             <form>
                 <label>Title: </label>
                 <input type='text'></input> 
@@ -16,6 +20,7 @@ function SongForm(){
 
                 <label>Lyrics: </label>
                 <textarea type='text'></textarea> 
+
             </form>
         </>
     )
