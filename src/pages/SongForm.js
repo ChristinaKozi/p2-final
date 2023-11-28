@@ -14,6 +14,11 @@ function SongForm(){
         })
     }
 
+    function handleSubmit(e) {
+        e.preventDefault()
+
+    }
+
     return (
         <>
             <header>
@@ -21,21 +26,18 @@ function SongForm(){
             </header>
             <h1>Submit New Song</h1>
             <hr />
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label>Title: </label>
-                <input type='text'></input> 
-                <br />
-                <br />
+                <input name="title" onChange={handleChange} type='text'></input> 
+                <br /><br />
 
                 <label>Artist: </label>
-                <input type='text'></input>
-                <br />
-                <br />
+                <input name="artist" onChange={handleChange} type='text'></input>
+                <br /><br />
 
                 <label>Lyrics: </label>
-                <textarea type='text'></textarea> 
-                <br />
-                <br /> 
+                <textarea name="lyrics" onChange={handleChange} type='text'></textarea> 
+                <br /><br /> 
 
                 <input type='submit'></input>
             </form>
