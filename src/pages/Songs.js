@@ -11,7 +11,7 @@ function Songs() {
     },[])
 
     const songList = songs.map(song =>{
-        return <SongCard key={song.id} />
+        return <SongCard key={song.id} song={song} />
     })
 
     return (
@@ -20,6 +20,7 @@ function Songs() {
                 <NavBar />
             </header>
             Songs
+            {songList}
         </div>
     )
 }
