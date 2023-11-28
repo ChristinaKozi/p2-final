@@ -7,6 +7,8 @@ function SongForm(){
             <header>
                 <NavBar />
             </header>
+            <h1>Submit New Song</h1>
+            <hr />
             <form>
                 <label>Title: </label>
                 <input type='text'></input> 
@@ -22,7 +24,7 @@ function SongForm(){
                 <textarea type='text'></textarea> 
                 <br />
                 <br /> 
-                
+
                 <input type='submit'></input>
             </form>
         </>
