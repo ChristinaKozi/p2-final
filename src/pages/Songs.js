@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import NavBar from "../components/NavBar"
+import SongCard from "../components/SongCard"
 
 function Songs() {
     const [songs, setSongs] = useState([])
@@ -10,7 +11,7 @@ function Songs() {
         .then(data => setSongs(data))
     },[])
 
-    const songList = songs.map(song =>{
+    const songList = songs.map(song =>{ 
         return <SongCard key={song.id} song={song} />
     })
 
