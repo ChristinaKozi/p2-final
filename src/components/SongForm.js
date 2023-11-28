@@ -20,7 +20,10 @@ function SongForm(){
 
                 <label>Lyrics: </label>
                 <textarea type='text'></textarea> 
-
+                <br />
+                <br /> 
+                
+                <input type='submit'></input>
             </form>
         </>
     )
