@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import NavBar from "../components/NavBar"
 import SongCard from "../components/SongCard"
+import SongForm from "../components/SongForm"
 
 function Songs() {
     const [songs, setSongs] = useState([])
@@ -20,8 +21,10 @@ function Songs() {
             <header>
                 <NavBar />
             </header>
-            Songs
+            <h1>Songs</h1>
+            <hr />
             {songList}
+            <SongForm />
         </div>
     )
 }
