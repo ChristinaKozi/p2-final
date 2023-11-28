@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import NavBar from "../components/NavBar"
 import SongCard from "../components/SongCard"
+import Genre from "../components/Genre"
 
 function Songs() {
     const [songs, setSongs] = useState([])
@@ -9,6 +10,14 @@ function Songs() {
         fetch('http://localhost:3000/songs')
         .then(r=>r.json())
         .then(data => setSongs(data))
+    },[])
+
+    const [genre, setGenre] = useState("")
+
+    useEffect(()=>{
+        fetch('https://binaryjazz.us/wp-json/genrenator/v1/genre/')
+        .then(r=>r.json())
+        .then(data=>{setGenre(data)})
     },[])
 
     const songList = songs.map(song =>{ 
@@ -20,8 +29,9 @@ function Songs() {
             <header>
                 <NavBar />
             </header>
-            <h1>Songs</h1>
+            <Genre genre={genre}/>
             <hr />
+            <h1>Songs</h1>
             {songList}
         </div>
     )
