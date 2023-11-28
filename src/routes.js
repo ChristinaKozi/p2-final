@@ -1,19 +1,24 @@
 import SongForm from "./pages/SongForm";
 import Home from "./pages/Home";
 import Songs from "./pages/Songs";
+import ErrorPage from "./pages/ErrorPage";
 
 const routes = [
     {
         path: "/",
-        element: <Home />
+        element: <Home />,
+        errorElement: <ErrorPage />
     },
     {
         path: "/songs",
-        element: <Songs />
+        element: <Songs />,
+        errorElement: <ErrorPage />
+
     },
     {
         path: "/song/new",
-        element: <SongForm />
+        element: <SongForm />,
+        errorElement: <ErrorPage />
     }
 ]
 
