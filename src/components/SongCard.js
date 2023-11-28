@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Lyrics from "./Lyrics";
 
 function SongCard({ song }){
-    const {id, title, artist} = song
+    const {id, title, artist, lyrics} = song
 
     return (
         <article>
