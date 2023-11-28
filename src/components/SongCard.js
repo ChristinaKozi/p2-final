@@ -8,7 +8,7 @@ function SongCard({ song }){
         <article>
             <h2>"{title}" by {artist}</h2>
             <p>
-                <Link to={`/song/${id}`}>
+                <Link to={`/song/new`}>
                     <button>Add New Song</button>
                 </Link>
             </p>

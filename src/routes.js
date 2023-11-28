@@ -12,7 +12,7 @@ const routes = [
         element: <Songs />
     },
     {
-        path: "/song/:id",
+        path: "/song/new",
         element: <SongForm />
     }
 ]
