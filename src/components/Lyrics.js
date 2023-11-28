@@ -1,17 +1,18 @@
 import React,{ useState } from "react";
 
-function Lyrics({lyrics}) {
+function Lyrics({ lyrics }) {
     const [showLyrics, setShowLyrics] = useState(false)
 
     function handleClick() {
         setShowLyrics(!showLyrics)
-        console.log(showLyrics)
     }
 
     return (
         <>
-            {setShowLyrics? <p>{lyrics}</p> : null}
-            <button onClick={handleClick}>{setShowLyrics? <p>View Lyrics</p> : <p>Hide Lyrics</p>}</button>
+            {showLyrics? <> <p>Lyrics:</p> <p>{lyrics}</p> </> : null}
+            <button onClick={handleClick}>
+                {showLyrics? <p>Hide Lyrics</p> : <p>View Lyrics</p>}
+                </button>
         </>
     )
 }
