@@ -8,6 +8,12 @@ function SongForm(){
         lyrics: ""
     })
 
+    function handleChange(e) {
+        setSong({
+            ...song, [e.target.name]: e.target.value
+        })
+    }
+
     return (
         <>
             <header>
