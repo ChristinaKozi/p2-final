@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import NavBar from "../components/NavBar"
 import SongCard from "../components/SongCard"
 import Genre from "../components/Genre"
+import { Link } from "react-router-dom"
 
 function Songs() {
     const [songs, setSongs] = useState([])
@@ -33,6 +34,11 @@ function Songs() {
             <hr />
             <h1>Songs</h1>
             {songList}
+            <p>
+                <Link to={`/song/new`}>
+                    <button>Click To Add New Song</button>
+                </Link>
+            </p>
         </div>
     )
 }

@@ -16,7 +16,20 @@ function SongForm(){
 
     function handleSubmit(e) {
         e.preventDefault()
-
+        const newSong = {
+            title: song.title,
+            artist: song.artist,
+            lyrics: song.lyrics
+        }
+        fetch('http://localhost:3000/songs', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newSong)
+        })
+        .then(r=>r.json())
+        .then(data=>console.log(data))
     }
 
     return (
