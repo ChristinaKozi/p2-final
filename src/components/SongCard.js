@@ -6,10 +6,10 @@ function SongCard({ song }){
 
     return (
         <article>
-            <h2>"{title}" by {artist}</h2>
+            <p>  {id}. "{title}" by {artist}</p>
             <p>
                 <Link to={`/song/new`}>
-                    <button>Add New Song</button>
+                    <button>Click To Add New Song</button>
                 </Link>
             </p>
         </article>
