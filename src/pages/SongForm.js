@@ -1,7 +1,9 @@
 import React from "react";
-import NavBar from "./NavBar";
+import NavBar from "../components/NavBar";
 
 function SongForm(){
+
+    
     return (
         <>
             <header>
@@ -31,4 +33,4 @@ function SongForm(){
     )
 }
 
-export default SongForm
+export default SongForm;

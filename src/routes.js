@@ -1,4 +1,4 @@
-import SongForm from "./components/SongForm";
+import SongForm from "./pages/SongForm";
 import Home from "./pages/Home";
 import Songs from "./pages/Songs";
 
