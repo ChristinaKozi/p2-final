@@ -1,14 +1,31 @@
-import React from "react";
+import React, { useEffect,useState } from "react";
 import NavBar from "../components/NavBar";
+import Genre from "../components/Genre";
 
 function SongForm(){
+    const [song, setSong] = useState({
+        title: "",
+        artist: "",
+        lyrics: ""
+    })
 
-    
+    const [genre, setGenre] = useState({
+        genre: ""
+    })
+
+    useEffect(()=>{
+        fetch('https://binaryjazz.us/wp-json/genrenator/v1/genre/')
+        .then(r=>r.json())
+        .then(data=>console.log(data))
+    },[])
+
+
     return (
         <>
             <header>
                 <NavBar />
             </header>
+            <Genre />
             <h1>Submit New Song</h1>
             <hr />
             <form>
