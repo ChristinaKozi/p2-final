@@ -25,12 +25,18 @@ function Songs() {
         return <SongCard key={song.id} song={song} />
     })
 
+    function handleClick(){
+        fetch('https://binaryjazz.us/wp-json/genrenator/v1/genre/')
+        .then(r=>r.json())
+        .then(data=>{setGenre(data)})
+    }
+
     return (
         <div>
             <header>
                 <NavBar />
             </header>
-            <Genre genre={genre}/>
+            <Genre genre={genre} handleClick={handleClick}/>
             <hr />
             <h1>Songs</h1>
             {songList}

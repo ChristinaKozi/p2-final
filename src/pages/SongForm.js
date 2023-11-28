@@ -1,7 +1,7 @@
-import React, { useEffect,useState } from "react";
+import React, { useState } from "react";
 import NavBar from "../components/NavBar";
 
-function SongForm(){
+function SongForm(props){
     const [song, setSong] = useState({
         title: "",
         artist: "",
@@ -29,7 +29,10 @@ function SongForm(){
             body: JSON.stringify(newSong)
         })
         .then(r=>r.json())
-        .then(data=>console.log(data))
+        .then(data=>{
+            props.history.push('/songs')
+            console.log(data)
+        })
     }
 
     return (
