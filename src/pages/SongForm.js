@@ -9,14 +9,12 @@ function SongForm(){
         lyrics: ""
     })
 
-    const [genre, setGenre] = useState({
-        genre: ""
-    })
+    const [genre, setGenre] = useState("")
 
     useEffect(()=>{
         fetch('https://binaryjazz.us/wp-json/genrenator/v1/genre/')
         .then(r=>r.json())
-        .then(data=>console.log(data))
+        .then(data=>{setGenre(data)})
     },[])
 
 
@@ -25,7 +23,7 @@ function SongForm(){
             <header>
                 <NavBar />
             </header>
-            <Genre />
+            <Genre genre={genre}/>
             <h1>Submit New Song</h1>
             <hr />
             <form>
