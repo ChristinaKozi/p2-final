@@ -1,9 +1,9 @@
 import React from "react";
 
-function Lyrics() {
+function Lyrics({lyrics}) {
     return (
         <>
-            lyrics
+            <button>View Lyrics</button>
         </>
     )
 }

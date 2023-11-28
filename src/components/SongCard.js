@@ -7,9 +7,7 @@ function SongCard({ song }){
     return (
         <article>
             <p>  {id}. "{title}" by {artist}</p>
-            <p>
-                <Link to={`/song/${id}`}></Link>
-            </p>
+            <Lyrics lyrics={lyrics}/>
         </article>
     )
 }
