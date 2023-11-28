@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"
 import NavBar from "../components/NavBar";
 
-function SongForm(props){
+function SongForm(){
+    const navigate = useNavigate()
+
     const [song, setSong] = useState({
         title: "",
         artist: "",
@@ -29,10 +32,8 @@ function SongForm(props){
             body: JSON.stringify(newSong)
         })
         .then(r=>r.json())
-        .then(data=>{
-            props.history.push('/songs')
-            console.log(data)
-        })
+        .then(data=>data)
+        navigate('/songs')
     }
 
     return (

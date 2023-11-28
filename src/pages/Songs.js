@@ -13,6 +13,10 @@ function Songs() {
         .then(data => setSongs(data))
     },[])
 
+    const songList = songs.map(song =>{ 
+        return <SongCard key={song.id} song={song} />
+    })
+
     const [genre, setGenre] = useState("")
 
     useEffect(()=>{
@@ -20,10 +24,6 @@ function Songs() {
         .then(r=>r.json())
         .then(data=>{setGenre(data)})
     },[])
-
-    const songList = songs.map(song =>{ 
-        return <SongCard key={song.id} song={song} />
-    })
 
     function handleClick(){
         fetch('https://binaryjazz.us/wp-json/genrenator/v1/genre/')
