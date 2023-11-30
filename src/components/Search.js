@@ -12,7 +12,6 @@ function Search({ searchTerm,onSearch }) {
                 value={searchTerm} 
                 onChange={(e)=>onSearch(e.target.value)}> 
             </input>
-
         </div>
     )
 }

@@ -1,12 +1,31 @@
 .search {
     display: inline-block;
     box-sizing: border-box;
-    width: 70px;
+    width: 160px;
     padding: 5px;
-     margin: 0 6px 6px;
-    background: lightblue;
+    margin: 0 6px 6px;
+    background: white;
     text-decoration: none;
     text-align: center;
     font-size: min(10vw, 15px) ;
     color: black;
+}
+
+.genre {
+    display: block;
+    box-sizing: border-box;
+    width: 400px;
+    padding: 5px;
+    margin: 0 auto;
+    background: paleturquoise;
+    text-decoration: none;
+    text-align: center;
+    font-size: min(10vw, 15px) ;
+    color: black;
+}
+
+.lyrics {
+    background: lightblue;
+    text-decoration: none;
+    text-align: center;
 }
