@@ -1,8 +1,9 @@
 import React from "react";
+import './Search.css'
 
 function Search({ searchTerm,onSearch }) {
     return (
-        <div>
+        <div className = "search">
             <label>Search Songs:</label>
             <input 
                 type="text" 

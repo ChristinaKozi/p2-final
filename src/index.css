@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  height: 100vh; /* Set to the full height of the viewport */
+  background-color: #f0f0f0; /* Optional: Add a background color */
 }
 
 code {
