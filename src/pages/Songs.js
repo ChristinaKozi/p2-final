@@ -47,9 +47,9 @@ function Songs() {
                 <NavBar />
             </header>
             <Genre genre={genre} handleClick={handleClick}/>
-            <hr />
-            <Search searchTerm={searchTerm} onSearch={handleSearch} />
             <h1>Songs</h1>
+            <Search searchTerm={searchTerm} onSearch={handleSearch} />
+            <hr />
             {songList}
             <p>
                 <Link to={`/song/new`}>

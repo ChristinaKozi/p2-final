@@ -14,3 +14,40 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.search {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 160px;
+  padding: 5px;
+  margin: 0 6px 6px;
+  background: white;
+  text-decoration: none;
+  text-align: left;
+  font-size: min(10vw, 15px) ;
+  color: black;
+}
+
+.genre {
+  display: block;
+  width: 400px;
+  padding: 5px;
+  margin: 0 auto;
+  background: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: min(10vw, 15px) ;
+  color: black;
+}
+
+.lyrics {
+  background: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.textbox {
+  background: white;
+  text-decoration: none;
+  text-align: left;
+}

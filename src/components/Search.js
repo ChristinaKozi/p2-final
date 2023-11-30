@@ -1,5 +1,4 @@
 import React from "react";
-import './Search.css'
 
 function Search({ searchTerm,onSearch }) {
     return (
@@ -8,7 +7,7 @@ function Search({ searchTerm,onSearch }) {
             <input 
                 type="text" 
                 id="search" 
-                placeholder="Search Title..." 
+                placeholder="Enter Song Title..." 
                 value={searchTerm} 
                 onChange={(e)=>onSearch(e.target.value)}> 
             </input>

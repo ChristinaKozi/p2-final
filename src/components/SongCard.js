@@ -6,7 +6,7 @@ function SongCard({ song }){
 
     return (
         <article>
-            <p>  {id}. "{title}" by {artist}</p>
+            <h3>  {id}. "{title}" by {artist}</h3>
             <Lyrics lyrics={lyrics}/>
         </article>
     )

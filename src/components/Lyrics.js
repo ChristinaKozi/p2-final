@@ -9,7 +9,7 @@ function Lyrics({ lyrics }) {
 
     return (
         <>
-            {showLyrics? <> <p className="lyrics">Lyrics:</p> <p className="lyrics">{lyrics}</p> </> : null}
+            {showLyrics? <> <p>Lyrics:</p> <p className="lyrics">{lyrics}</p> </> : null}
             <button onClick={handleClick}>
                 {showLyrics? <p>Hide Lyrics</p> : <p>View Lyrics</p>}
                 </button>
