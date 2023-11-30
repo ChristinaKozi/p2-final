@@ -3,9 +3,11 @@ import NavBar from "../components/NavBar"
 import SongCard from "../components/SongCard"
 import Genre from "../components/Genre"
 import { Link } from "react-router-dom"
+import Search from "../components/Search"
 
 function Songs() {
     const [songs, setSongs] = useState([])
+    const [searchTerm, setSearchTerm] = useState("")
 
     useEffect(()=>{
         fetch('http://localhost:3000/songs')
@@ -38,6 +40,7 @@ function Songs() {
             </header>
             <Genre genre={genre} handleClick={handleClick}/>
             <hr />
+            <Search searchTerm={searchTerm}/>
             <h1>Songs</h1>
             {songList}
             <p>
