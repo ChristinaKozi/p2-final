@@ -7,7 +7,7 @@ import Search from "../components/Search"
 
 function Songs() {
     const [songs, setSongs] = useState([])
-    const [searchTerm, setSearchTerm] = useState("")
+    const [searchTerm, setSearchTerm] = useState("will")
 
     useEffect(()=>{
         fetch('http://localhost:3000/songs')
@@ -15,9 +15,14 @@ function Songs() {
         .then(data => setSongs(data))
     },[])
 
-    const songList = songs.map(song =>{ 
+    const filteredSongs = songs.filter(song => {
+        return song.title.toLowerCase().includes(searchTerm.toLowerCase())
+    })
+    const songList = filteredSongs.map(song =>{ 
         return <SongCard key={song.id} song={song} />
     })
+
+    console.log(filteredSongs)
 
     const [genre, setGenre] = useState("")
 
