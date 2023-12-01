@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import NavBar from "./NavBar";
 
 function SongForm(){
     const [title,setTitle] = useState('')
@@ -22,6 +21,9 @@ function SongForm(){
         })
         .then(r=>r.json())
         .then(data=>data)
+        setTitle('')
+        setArtist('')
+        setLyrics('')
     }
 
     return (
