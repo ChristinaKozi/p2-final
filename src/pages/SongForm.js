@@ -4,25 +4,16 @@ import NavBar from "../components/NavBar";
 
 function SongForm(){
     const navigate = useNavigate()
-
-    const [song, setSong] = useState({
-        title: "",
-        artist: "",
-        lyrics: ""
-    })
-
-    function handleChange(e) {
-        setSong({
-            ...song, [e.target.name]: e.target.value
-        })
-    }
+    const [title,setTitle] = useState('')
+    const [artist,setArtist] = useState('')
+    const [lyrics,setLyrics] = useState('')
 
     function handleSubmit(e) {
         e.preventDefault()
         const newSong = {
-            title: song.title,
-            artist: song.artist,
-            lyrics: song.lyrics
+            title: title,
+            artist: artist,
+            lyrics: lyrics
         }
         fetch('http://localhost:3000/songs', {
             method: 'POST',
@@ -45,15 +36,15 @@ function SongForm(){
             <hr />
             <form onSubmit={handleSubmit}>
                 <label>Title: </label>
-                <input name="title" onChange={handleChange} type='text'></input> 
+                <input name="title" value={title} onChange={(e)=>{setTitle(e.target.value)}} type='text'></input> 
                 <br /><br />
 
                 <label>Artist: </label>
-                <input name="artist" onChange={handleChange} type='text'></input>
+                <input name="artist" value={artist} onChange={(e)=>{setArtist(e.target.value)}} type='text'></input>
                 <br /><br />
 
                 <label>Lyrics: </label>
-                <textarea name="lyrics" onChange={handleChange} type='text'></textarea> 
+                <textarea name="lyrics" value={lyrics} onChange={(e)=>{setLyrics(e.target.value)}} type='text'></textarea> 
                 <br /><br /> 
 
                 <input type='submit'></input>
