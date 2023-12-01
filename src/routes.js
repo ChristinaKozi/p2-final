@@ -1,7 +1,7 @@
-import SongForm from "./pages/SongForm";
 import Home from "./pages/Home";
 import Songs from "./pages/Songs";
 import ErrorPage from "./pages/ErrorPage";
+import About from "./pages/About";
 
 const routes = [
     {
@@ -16,8 +16,8 @@ const routes = [
 
     },
     {
-        path: "/song/new",
-        element: <SongForm />,
+        path: "/about",
+        element: <About />,
         errorElement: <ErrorPage />
     }
 ]

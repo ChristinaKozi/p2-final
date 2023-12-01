@@ -4,6 +4,7 @@ import SongCard from "../components/SongCard"
 import Genre from "../components/Genre"
 import { Link } from "react-router-dom"
 import Search from "../components/Search"
+import SongForm from "../components/SongForm"
 
 function Songs() {
     const [songs, setSongs] = useState([])
@@ -51,11 +52,7 @@ function Songs() {
             <Search searchTerm={searchTerm} onSearch={handleSearch} />
             <hr />
             {songList}
-            <p>
-                <Link to={`/song/new`}>
-                    <button>Click To Add New Song</button>
-                </Link>
-            </p>
+            <SongForm />
         </div>
     )
 }

@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"
-import NavBar from "../components/NavBar";
+import NavBar from "./NavBar";
 
 function SongForm(){
-    const navigate = useNavigate()
     const [title,setTitle] = useState('')
     const [artist,setArtist] = useState('')
     const [lyrics,setLyrics] = useState('')
@@ -24,14 +22,10 @@ function SongForm(){
         })
         .then(r=>r.json())
         .then(data=>data)
-        navigate('/songs')
     }
 
     return (
         <>
-            <header>
-                <NavBar />
-            </header>
             <h1>Submit New Song</h1>
             <hr />
             <form onSubmit={handleSubmit}>
