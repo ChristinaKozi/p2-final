@@ -12,7 +12,8 @@ This prject utilizes a JSON file and you must run the below command in your term
 
 # db.json Data Structure
 
-```{
+```
+{
   "songs": [
     {
       "title": "I Will Always Love You",
@@ -21,7 +22,8 @@ This prject utilizes a JSON file and you must run the below command in your term
       "id": 1
     },
   ]
-}```
+}
+```
 
 ## Pages
 
