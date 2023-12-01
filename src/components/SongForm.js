@@ -26,7 +26,7 @@ function SongForm(){
 
     return (
         <>
-            <h1>Submit New Song</h1>
+            <h2>Submit New Song</h2>
             <hr />
             <form onSubmit={handleSubmit}>
                 <label>Title: </label>

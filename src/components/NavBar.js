@@ -12,19 +12,18 @@ function NavBar() {
         </NavLink>
 
         <NavLink
-          to="/songs"
-          className="nav-link"
-        >
-          Songs
-        </NavLink>
-
-        <NavLink
           to="/about"
           className="nav-link"
         >
           About
         </NavLink>
 
+        <NavLink
+          to="/songs"
+          className="nav-link"
+        >
+          Songs
+        </NavLink>
     </nav>
     );
 };

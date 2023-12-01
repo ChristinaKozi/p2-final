@@ -10,14 +10,13 @@ const routes = [
         errorElement: <ErrorPage />
     },
     {
-        path: "/songs",
-        element: <Songs />,
-        errorElement: <ErrorPage />
-
-    },
-    {
         path: "/about",
         element: <About />,
+        errorElement: <ErrorPage />
+    },
+    {
+        path: "/songs",
+        element: <Songs />,
         errorElement: <ErrorPage />
     }
 ]
