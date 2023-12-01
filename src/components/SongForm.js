@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function SongForm(){
+function SongForm({ songs,setSongs }){
     const [title,setTitle] = useState('')
     const [artist,setArtist] = useState('')
     const [lyrics,setLyrics] = useState('')
@@ -20,7 +20,7 @@ function SongForm(){
             body: JSON.stringify(newSong)
         })
         .then(r=>r.json())
-        .then(data=>data)
+        .then(data=>setSongs([...songs,data]))
         setTitle('')
         setArtist('')
         setLyrics('')

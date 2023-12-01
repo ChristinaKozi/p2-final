@@ -44,7 +44,7 @@ function Songs() {
 
     return (
         <div>
-            <header>
+            <header> 
                 <NavBar />
             </header>
             <Genre genre={genre} handleClick={handleClick}/>
@@ -52,7 +52,7 @@ function Songs() {
             <Search searchTerm={searchTerm} onSearch={handleSearch} />
             <hr />
             {songList}
-            <SongForm />
+            <SongForm songs={songs} setSongs={setSongs}/>
         </div>
     )
 }
