@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react"
 import NavBar from "../components/NavBar"
 import SongCard from "../components/SongCard"
 import Genre from "../components/Genre"
-import { Link } from "react-router-dom"
 import Search from "../components/Search"
 import SongForm from "../components/SongForm"
 
